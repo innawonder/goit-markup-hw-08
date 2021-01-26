@@ -1,0 +1,154 @@
+header {
+  border-bottom: 1px solid $border-color;
+}
+
+.header a {
+  display: inline-block;
+}
+
+.header-nav a.logo {
+  // margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo {
+  text-decoration: none;
+
+  .accent {
+    color: $accent-color;
+  }
+  .black {
+    color: $logo-accent-header;
+  }
+}
+
+.logo.accent,
+.logo.black {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.header.container {
+  position: relative;
+  // display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: space-between;
+}
+
+.header.nav,
+.contacts {
+  background-color: $primary-background;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media screen and (min-width: 768 px) {
+    align-items: baseline;
+  }
+  // align-items: baseline;
+}
+
+// .site-nav.list {
+//   display: flex;
+// }
+
+.site-nav {
+  // .item:not(:last-child) {
+  //   margin-right: 50px;
+  // }
+
+  a {
+    display: block;
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-family: $primary-font;
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    list-style-type: none;
+
+    transition: color 250ms $timing-function;
+  }
+
+  a:hover,
+  a:focus {
+    color: $accent-color;
+  }
+
+  .site-nav > a {
+    color: $accent-color;
+  }
+}
+
+.studio.current,
+.portfolio.current {
+  color: $accent-color;
+}
+
+.studio.current::after,
+.portfolio.current::after {
+  display: block;
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: $accent-color;
+  border-radius: 2px;
+
+  transition: color 250ms $timing-function;
+}
+
+.contacts.list {
+  // display: flex;
+  margin-left: auto;
+  align-items: baseline;
+}
+
+.contacts {
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $secondary-text-color;
+    background-color: $primary-background;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms $timing-function;
+  }
+
+  .icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+
+  a:hover,
+  a:focus {
+    color: $accent-color;
+  }
+}

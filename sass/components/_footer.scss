@@ -1,0 +1,188 @@
+.footer {
+  background-color: $hero-background;
+}
+
+.flex-footer {
+  /* добавила свойства .container */
+  // width: 1200px;
+  padding: 60px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.address-info {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.flex-footer .logo {
+  margin-bottom: 20px;
+}
+.logo {
+  text-decoration: none;
+}
+.logo.accent {
+  color: $accent-color;
+}
+.logo.white {
+  color: $primary-background;
+}
+
+.logo.accent,
+.logo.white {
+  @extend .logo.black;
+  // font-family: $logo-font;
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: 1.19;
+  // letter-spacing: 0.03em;
+}
+
+.address {
+  color: $primary-background;
+  margin-bottom: 9px;
+}
+
+.mail.link {
+  margin-bottom: 9px;
+}
+
+.phone.link {
+  margin-bottom: 0;
+}
+.contacts-footer {
+  color: $contacts-color-footer;
+}
+.address,
+.contacts-footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.join-us {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.join,
+.mailing {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  color: $primary-background;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.joinsocial-links {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.joinsocial-image {
+  margin: 0;
+  padding: 0;
+
+  .link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    margin-right: 10px;
+    padding: 12px;
+    color: $primary-background;
+    background-color: $icon-footer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 250ms $timing-function;
+  }
+  .link:hover,
+  .link:focus {
+    background-color: $accent-color;
+    color: $primary-background;
+  }
+  .icon {
+    fill: currentColor;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.form-input {
+  margin: 0;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  padding: 15px 16px 15px 16px;
+  width: 358px;
+  height: 50px;
+
+  color: $primary-background;
+  background: transparent;
+  border: 1px solid $form-border-color;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px $box-shadow-color);
+  border-radius: 4px;
+}
+
+.form-input::placeholder {
+  color: $contacts-color-footer;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.button-subscribe {
+  display: flex;
+  min-width: 200px;
+  height: 50px;
+  padding: 0;
+  color: $primary-background;
+  background-color: $accent-color;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  box-shadow: 0px 4px 4px $box-shadow-color;
+  cursor: pointer;
+}
+
+.subscribe-text {
+  margin-right: 10px;
+}

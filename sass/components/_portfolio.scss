@@ -1,0 +1,150 @@
+.main {
+  background-color: $primary-background;
+  font-family: $primary-font;
+  color: $primary-text-color;
+}
+
+.main-nav.list {
+  margin: 0;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  .item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .button {
+    font-family: $primary-font;
+    color: $primary-text-color;
+    text-decoration: none;
+
+    transition: color 250ms $timing-function,
+      background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+  }
+
+  .primary,
+  .secondary {
+    display: inline-block;
+    border-radius: 4px;
+    border: transparent;
+    padding: 6px 22px;
+    border-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  .primary:hover,
+  .primary:focus,
+  .secondary:hover,
+  .secondary:focus {
+    color: $primary-background;
+    background-color: $accent-color;
+    border-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.projects.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects {
+  a {
+    font-family: $primary-font;
+    color: $primary-text-color;
+    text-decoration: none;
+
+    transition: color 250ms $timing-function,
+      background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+  }
+
+  .item {
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+    background: $primary-background;
+    border: 1px solid $card-background;
+  }
+}
+
+.projects .project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: $overlay-portfolio;
+
+  padding: 63px 24px;
+  transform: translateY(100%);
+  opacity: 0;
+
+  transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+}
+
+.projects {
+  .link:hover .proj-description,
+  .link:focus .proj-description {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $primary-background;
+  }
+
+  .link:hover,
+  .link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  .item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &-name {
+    padding: 20px 24px;
+  }
+
+  &-title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &-description {
+    margin: 0;
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+  }
+}

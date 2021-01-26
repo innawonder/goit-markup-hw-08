@@ -1,0 +1,69 @@
+.work.container {
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 0;
+  }
+}
+
+.work {
+  background-color: $primary-background;
+
+  &-title {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  .list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    position: relative;
+    width: 370px;
+    justify-content: center;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-thumb {
+    display: block;
+    position: relative;
+  }
+
+  .name {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+  }
+
+  .text {
+    margin: 0;
+    padding: 27px 82px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-background;
+    background-color: $overlay-studio;
+  }
+}

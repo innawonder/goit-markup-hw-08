@@ -1,0 +1,114 @@
+.team {
+  background-color: $team-background;
+  padding: 0px;
+
+  &-title {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  .list {
+    // display: flex;
+    margin: 0;
+    padding: 0;
+    // justify-content: center;
+  }
+
+  .item {
+    @media screen and (max-width: $tablet) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+      margin-right: 0px;
+    }
+
+    // width: 270px;
+    // margin: 0;
+    justify-content: center;
+    background: $primary-background;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  // .item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+
+  &-description {
+    margin: 0;
+    padding: 30px 30px;
+  }
+
+  &-member {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  &-position {
+    margin: 0;
+    margin-bottom: 16px;
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}
+
+.teamsocial-links {
+  display: inline-flex;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  list-style: none;
+}
+
+.teamsocial-image {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+
+  .link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    color: $icon-color;
+    background-color: $primary-background;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    transition: color 250ms $timing-function,
+      background-color 250ms $timing-function;
+  }
+
+  .link:hover,
+  .link:focus {
+    background-color: $accent-color;
+    color: $primary-background;
+  }
+
+  .icon {
+    fill: currentColor;
+  }
+}
+
+.teamsocial-image:last-child {
+  margin: 0;
+}
